@@ -18,6 +18,7 @@ class CreateCodigosTable extends Migration
             $table->primary('cp');
             $table->foreignId('localidad_id')->constrained('localidades');
             //$table->timestamps();
+            //cambio desde remoto
         });
     }
 
