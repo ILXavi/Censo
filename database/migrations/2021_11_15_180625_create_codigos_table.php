@@ -14,8 +14,8 @@ class CreateCodigosTable extends Migration
     public function up()
     {
         Schema::create('codigos', function (Blueprint $table) {
-            $table->integer('cp')->unsigned();
-            $table->primary('cp');
+            $table->integer('id')->unsigned();
+            $table->primary('id');
             $table->foreignId('localidad_id')->constrained('localidades');
             //$table->timestamps();
         });
