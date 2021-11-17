@@ -16,7 +16,7 @@ class CreateProvinciasTable extends Migration
         Schema::create('provincias', function (Blueprint $table) {
             $table->id();
             $table->nombre('string');
-            $table->foreignId('comunidad_id')->constrained('comunidades');
+            $table->foreignId('comunidad_id')->constrained();
             //$table->timestamps();
         });
     }

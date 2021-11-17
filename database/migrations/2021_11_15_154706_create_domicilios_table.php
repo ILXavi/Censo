@@ -20,7 +20,7 @@ class CreateDomiciliosTable extends Migration
             $table->integer('numero');
             //$table->foreignId('cp')->constrained('codigos');
             $table->unsignedInteger('cp');
-            $table->foreign('cp')->references('cp')->on('codigos');
+            //$table->foreign('cp')->references('cp')->on('codigos');
             //$table->timestamps();
         });
     }
