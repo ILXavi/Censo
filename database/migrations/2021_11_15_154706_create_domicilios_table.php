@@ -13,11 +13,14 @@ class CreateDomiciliosTable extends Migration
      */
     public function up()
     {
+        Schema::dropIfExists('domicilios');
         Schema::create('domicilios', function (Blueprint $table) {
             $table->id();
             $table->string('calle');
             $table->integer('numero');
-            $table->foreignId('cp')->constrained('codigos');
+            //$table->foreignId('cp')->constrained('codigos');
+            $table->unsignedInteger('cp');
+            $table->foreign('cp')->references('cp')->on('codigos');
             //$table->timestamps();
         });
     }

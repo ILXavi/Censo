@@ -13,13 +13,14 @@ class CreatePersonasTable extends Migration
      */
     public function up()
     {
+        Schema::dropIfExists('personas');
         Schema::create('personas', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
             $table->string('primer_apellido');
             $table->string('segundo_apellido');
             $table->date('fecha_nacimiento');
-            $table->foreignId('domicilio_id')->constrained('domicilios');
+            //$table->foreignId('domicilio_id')->constrained('domicilios');
             $table->timestamps();
         });
     }
