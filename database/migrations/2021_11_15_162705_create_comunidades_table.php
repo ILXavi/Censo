@@ -13,6 +13,7 @@ class CreateComunidadesTable extends Migration
      */
     public function up()
     {
+        Schema::dropIfExists('comunidades');
         Schema::create('comunidades', function (Blueprint $table) {
             $table->id();
             $table->nombre('string');

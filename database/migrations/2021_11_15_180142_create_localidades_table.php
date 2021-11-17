@@ -13,6 +13,7 @@ class CreateLocalidadesTable extends Migration
      */
     public function up()
     {
+        Schema::dropIfExists('localidades');
         Schema::create('localidades', function (Blueprint $table) {
             $table->id();
             $table->nombre('string');

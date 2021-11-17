@@ -13,6 +13,7 @@ class CreateCodigosTable extends Migration
      */
     public function up()
     {
+        Schema::dropIfExists('codigos');
         Schema::create('codigos', function (Blueprint $table) {
             $table->integer('cp')->unsigned();
             $table->primary('cp');
