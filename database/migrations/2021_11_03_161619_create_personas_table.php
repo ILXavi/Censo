@@ -19,7 +19,7 @@ class CreatePersonasTable extends Migration
             $table->string('primer_apellido');
             $table->string('segundo_apellido');
             $table->date('fecha_nacimiento');
-
+            $table->foreignId('domicilio_id')->constrained('domicilios');
             $table->timestamps();
         });
     }
