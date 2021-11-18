@@ -35,8 +35,8 @@ class AddForeigns extends Migration
         });
         //
         Schema::table('domicilios', function (Blueprint $table) {
-            $table->dropForeign('personas_domilicio_id_foreign');
-            $table->$table->dropColumn('domicilio_id');
+            $table->dropForeign('domicilios_cp_foreign');
+            $table->$table->dropColumn('cp');
         });
 
         
