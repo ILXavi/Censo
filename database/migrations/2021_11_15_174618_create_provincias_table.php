@@ -16,8 +16,10 @@ class CreateProvinciasTable extends Migration
         Schema::dropIfExists('provincias');
         Schema::create('provincias', function (Blueprint $table) {
             $table->id();
-            $table->nombre('string');
-            $table->foreignId('comunidad_id')->constrained();
+            $table->string('nombre');
+            $table->unsignedBigInteger('comunidad_id');
+            $table->foreign('comunidad_id')->references('id')->on('comunidades');
+            //$table->foreignId('comunidad_id')->constrained();
             //$table->timestamps();
         });
     }

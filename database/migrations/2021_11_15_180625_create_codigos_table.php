@@ -17,7 +17,7 @@ class CreateCodigosTable extends Migration
         Schema::create('codigos', function (Blueprint $table) {
             $table->integer('cp')->unsigned();
             $table->primary('cp');
-            $table->foreignId('localidad_id')->constrained();
+            $table->foreignId('localidad_id')->constrained('localidades');
             //$table->timestamps();
             //mensaje creado desde casa para prueba
         });

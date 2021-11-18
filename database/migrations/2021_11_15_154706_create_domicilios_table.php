@@ -13,6 +13,7 @@ class CreateDomiciliosTable extends Migration
      */
     public function up()
     {
+        
         Schema::dropIfExists('domicilios');
         Schema::create('domicilios', function (Blueprint $table) {
             $table->id();
